@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edtWrite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#ff8a65"
+        android:ems="10"
+        android:hint="@string/EnterTextHere"
+        android:inputType="textMultiLine|textPersonName"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnReadAssets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:background="#ff5722"
+        android:onClick="Read_Assets"
+        android:text="Read Assets"
+        app:layout_constraintEnd_toStartOf="@+id/btnReadFile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtWrite" />
+
+    <Button
+        android:id="@+id/btnReadFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff5722"
+        android:onClick="Read_File"
+        android:text="Read File"
+        app:layout_constraintBottom_toBottomOf="@+id/btnReadAssets"
+        app:layout_constraintEnd_toStartOf="@+id/btnWriteFile"
+        app:layout_constraintStart_toEndOf="@+id/btnReadAssets"
+        app:layout_constraintTop_toTopOf="@+id/btnReadAssets"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnWriteFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff5722"
+        android:onClick="Write_File"
+        android:text="Write File"
+        app:layout_constraintBottom_toBottomOf="@+id/btnReadFile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnReadFile"
+        app:layout_constraintTop_toTopOf="@+id/btnReadFile"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnReadFile">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:inputType="textMultiLine"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
