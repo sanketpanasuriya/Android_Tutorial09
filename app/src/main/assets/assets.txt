@@ -1,4 +1,0 @@
-Hello, This is assets file.
-This file is just for demo
-So don't worry
-Be happy
