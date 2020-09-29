@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 fileOutputStream.write(data.getBytes());
                 fileOutputStream.close();
                 edtWrite.setText(null);
+                Toast.makeText(this,"File Write successfully",Toast.LENGTH_SHORT).show();
             }
             else{
                 Toast.makeText(this,"Please enter some text to read file",Toast.LENGTH_SHORT).show();
